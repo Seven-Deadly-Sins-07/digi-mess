@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "299281816563",
+    "project_id": "miniprojectlogin-data",
+    "storage_bucket": "miniprojectlogin-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299281816563:android:d3b423ad8ac4db1c87d086",
+        "android_client_info": {
+          "package_name": "shatayu07.com.mini_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299281816563-akdnm2v2b2i09bjmo5ann7379fg2d01v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsD3UmUXwcJ453OcrNaJ9JC173nRjQlKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299281816563-akdnm2v2b2i09bjmo5ann7379fg2d01v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
