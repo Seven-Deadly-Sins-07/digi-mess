@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/constants/buttons.dart';
+import 'package:mini_project/login/loginScreen.dart';
+import 'package:mini_project/signIn/signinScreen.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -33,17 +35,32 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ]),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height/1.9,),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 1.9,
+            ),
             ButtonWidget(
-                backgroundColor: Colors.indigo.shade900,
-                text: 'login',
-                textColor: Colors.white, n: 1,),
-            
+              backgroundColor: Colors.indigo.shade900,
+              text: 'login',
+              textColor: Colors.white,
+              // n: 1,
+              ontap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LoginSceen();
+                }));
+              },
+            ),
             const SizedBox(height: 20.0),
             ButtonWidget(
-                backgroundColor: Colors.white,
-                text: 'Sign-in',
-                textColor: Colors.black, n: 2,),
+              backgroundColor: Colors.white,
+              text: 'Sign-in',
+              textColor: Colors.black,
+              // n: 2,
+              ontap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SignInScreen();
+                }));
+              },
+            ),
           ],
         ),
         decoration: const BoxDecoration(

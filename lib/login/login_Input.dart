@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class loginInput extends StatefulWidget {
   final String text;
   final IconData icon;
+  final FormFieldValidator validator;
 
-  loginInput({required this.text, required this.icon});
+  loginInput({required this.text, required this.icon, required this.validator});
 
   @override
   State<loginInput> createState() => _loginInputState();
@@ -13,7 +14,8 @@ class loginInput extends StatefulWidget {
 class _loginInputState extends State<loginInput> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: widget.validator,
         decoration: InputDecoration(
           icon: Icon(widget.icon,
               size: 30.0, color: Colors.black),
