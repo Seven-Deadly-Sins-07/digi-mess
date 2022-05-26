@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/home_page.dart';
+import '../../screens/home_page.dart';
 import 'package:mini_project/login/loginScreen.dart';
 import 'package:mini_project/signIn/signinScreen.dart';
-import 'package:mini_project/customer_registration.dart';
+import '../screens/customer_registration.dart';
 
 class ButtonWidget extends StatelessWidget {
   final Color backgroundColor;
@@ -20,16 +20,18 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      minWidth: double.maxFinite,
-      height: MediaQuery.of(context).size.height / 14,
-      color: backgroundColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(40),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        minimumSize: const Size(300.0, 65.0),
+        primary: backgroundColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40.0),
+        )
       ),
-      onPressed: () {
+      onPressed: (){
         ontap();
-      }, //onPressed
+      },
+       //onPressed
       child: Center(
         child: Text(
           text,
@@ -40,3 +42,12 @@ class ButtonWidget extends StatelessWidget {
     );
   }
 }
+/*minWidth: double.maxFinite,
+      height: MediaQuery.of(context).size.height / 14,
+      color: backgroundColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(40),
+      ),
+      onPressed: () {
+        ontap();
+      },*/

@@ -6,7 +6,7 @@ import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/constants/buttons.dart';
 import 'package:mini_project/validator.dart';
 
-import '../home_page.dart';
+import '../../screens/home_page.dart';
 
 class LoginSceen extends StatefulWidget {
   const LoginSceen({Key? key}) : super(key: key);
@@ -66,7 +66,7 @@ class _LoginSceenState extends State<LoginSceen> {
                             MaterialPageRoute(builder: (context) {
                           return HomePage();
                         }));
-                      }else{
+                      } else {
                         print("try filling credentials");
                       }
                     },
@@ -79,11 +79,17 @@ class _LoginSceenState extends State<LoginSceen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlatButton(
+                      ElevatedButton(
                           onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.transparent,
+                          ),
                           child: const Text('forgotten username')),
-                      FlatButton(
+                      ElevatedButton(
                           onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.transparent,
+                          ),
                           child: const Text('forgotten password')),
                     ],
                   ),

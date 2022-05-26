@@ -7,7 +7,7 @@ import 'package:mini_project/login/loginScreen.dart';
 import 'package:mini_project/signIn/signin_input.dart';
 import 'package:mini_project/validator.dart';
 
-import '../home_page.dart';
+import '../../screens/home_page.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
