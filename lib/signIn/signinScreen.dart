@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/constants/arrow_body.dart';
 import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/constants/buttons.dart';
+import 'package:mini_project/firebase/flutterfire.dart';
 import 'package:mini_project/login/loginScreen.dart';
 import 'package:mini_project/signIn/signin_input.dart';
 import 'package:mini_project/validator.dart';
@@ -18,7 +19,13 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
   final GlobalKey<FormState> _formFieldKey = GlobalKey();
-
+  TextEditingController namecontroller = TextEditingController();
+  TextEditingController messnamecontroller = TextEditingController();
+  TextEditingController contactcontroller = TextEditingController();
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController messaddcontroller = TextEditingController();
+  TextEditingController messrncontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,42 +50,49 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 SizedBox(height: 50.0),
                 SignInInput(
+                  textEditingController: namecontroller,
                   icon: Icons.person,
                   hintText: 'Name',
                   validator: myValidator(requiredField: "name"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: messnamecontroller,
                   icon: CupertinoIcons.building_2_fill,
                   hintText: 'Mess name',
                   validator: myValidator(requiredField: "Mess name"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: contactcontroller,
                   icon: Icons.phone,
                   hintText: 'Contact number',
                   validator: myValidator(requiredField: "contact number"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: emailcontroller,
                   icon: Icons.email,
-                  hintText: 'Gmail',
+                  hintText: 'Email',
                   validator: myValidator(requiredField: "gmail"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: messaddcontroller,
                   icon: Icons.location_on_sharp,
                   hintText: 'Mess address',
                   validator: myValidator(requiredField: "address"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: messrncontroller,
                   icon: Icons.note_add,
                   hintText: 'Mess registration number',
                   validator: myValidator(requiredField: "Reg. number"),
                 ),
                 SizedBox(height: 10.0),
                 SignInInput(
+                  textEditingController: passwordcontroller,
                   icon: Icons.lock_outline,
                   hintText: 'Password',
                   validator: myValidator(requiredField: ""),
@@ -91,12 +105,17 @@ class _SignInScreenState extends State<SignInScreen> {
                     text: 'Sign-in',
                     textColor: Colors.white,
                     // n: 3,
-                    ontap: () {
+                    ontap: () async{
                       if (_formFieldKey.currentState!.validate()) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return HomePage();
-                        }));
+
+                        bool shouldNavigate = await register(emailcontroller.text.trim(),passwordcontroller.text.trim(),namecontroller.text.trim(),messnamecontroller.text.trim(),contactcontroller.text.trim(),messaddcontroller.text.trim(),messrncontroller.text.trim());
+                        if(shouldNavigate)
+                        {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                                return HomePage();
+                              }));
+                        }
                       } else {
                         print("try filling credentials");
                       }
@@ -112,10 +131,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     textColor: Colors.white,
                     // n: 3,
                     ontap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return LoginSceen();
-                      }));
+
                     },
                   ),
                 ),

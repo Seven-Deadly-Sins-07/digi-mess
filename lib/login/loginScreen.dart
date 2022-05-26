@@ -5,8 +5,8 @@ import 'package:mini_project/login/login_Input.dart';
 import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/constants/buttons.dart';
 import 'package:mini_project/validator.dart';
-
 import '../../screens/home_page.dart';
+import '../firebase/flutterfire.dart';
 
 class LoginSceen extends StatefulWidget {
   const LoginSceen({Key? key}) : super(key: key);
@@ -17,6 +17,8 @@ class LoginSceen extends StatefulWidget {
 
 class _LoginSceenState extends State<LoginSceen> {
   final GlobalKey<FormState> _formFieldKey = GlobalKey();
+  TextEditingController usernamecontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +44,14 @@ class _LoginSceenState extends State<LoginSceen> {
                 ),
                 const SizedBox(height: 250.0),
                 loginInput(
-                  text: 'Username',
+                  textEditingController: usernamecontroller,
+                  text: 'Email',
                   icon: Icons.verified_user,
-                  validator: myValidator(requiredField: "Useranme"),
+                  validator: myValidator(requiredField: "Email"),
                 ),
                 const SizedBox(height: 30.0),
                 loginInput(
+                  textEditingController: passwordcontroller,
                   text: 'Password',
                   icon: Icons.lock,
                   validator: myValidator(requiredField: "Password"),
@@ -57,15 +61,20 @@ class _LoginSceenState extends State<LoginSceen> {
                   padding: const EdgeInsets.only(left: 50.0, right: 15.0),
                   child: ButtonWidget(
                     backgroundColor: Colors.blue,
-                    text: 'login',
+                    text: 'Login',
                     textColor: Colors.white,
                     // n: 3,
-                    ontap: () {
+                    ontap: () async {
                       if (_formFieldKey.currentState!.validate()) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return HomePage();
-                        }));
+                        print(usernamecontroller.text);
+                        bool shouldNavigate = await signIn(usernamecontroller.text.trim(),passwordcontroller.text.trim());
+                        if(shouldNavigate)
+                        {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return HomePage();
+                          }));
+                        }
                       } else {
                         print("try filling credentials");
                       }
@@ -84,13 +93,13 @@ class _LoginSceenState extends State<LoginSceen> {
                           style: ElevatedButton.styleFrom(
                             primary: Colors.transparent,
                           ),
-                          child: const Text('forgotten username')),
+                          child: const Text('forgot username')),
                       ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             primary: Colors.transparent,
                           ),
-                          child: const Text('forgotten password')),
+                          child: const Text('forgot password')),
                     ],
                   ),
                 ),

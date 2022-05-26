@@ -17,6 +17,12 @@ class CustomerRegistration extends StatefulWidget {
 
 class _CustomerRegistrationState extends State<CustomerRegistration> {
   final GlobalKey<FormState> _formFieldKey = GlobalKey();
+  TextEditingController namecontroller = TextEditingController();
+  TextEditingController contact1controller = TextEditingController();
+  TextEditingController contact2controller = TextEditingController();
+  TextEditingController addresscontroller = TextEditingController();
+  TextEditingController collegecontroller = TextEditingController();
+  TextEditingController gendercontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,16 +44,19 @@ class _CustomerRegistrationState extends State<CustomerRegistration> {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height / 15),
                 loginInput(
+                    textEditingController: namecontroller,
                     text: 'Name',
                     icon: Icons.person,
                     validator: myValidator(requiredField: "name")),
                 SizedBox(height: 10.0),
                 loginInput(
+                    textEditingController: contact1controller,
                     text: 'Contact 1',
                     icon: Icons.phone,
                     validator: myValidator(requiredField: "contact")),
                 SizedBox(height: 10.0),
                 TextFormField(
+                  controller: contact2controller,
                   decoration: InputDecoration(
                     icon: Icon(Icons.phone, size: 30.0, color: Colors.black),
                     iconColor: Colors.blue[900],
@@ -64,16 +73,19 @@ class _CustomerRegistrationState extends State<CustomerRegistration> {
                 ),
                 SizedBox(height: 10.0),
                 loginInput(
+                    textEditingController: addresscontroller,
                     text: 'Address',
                     icon: Icons.location_on_sharp,
                     validator: myValidator(requiredField: "address")),
                 SizedBox(height: 10.0),
                 loginInput(
+                    textEditingController: collegecontroller,
                     text: 'College',
                     icon: CupertinoIcons.building_2_fill,
                     validator: myValidator(requiredField: "college name")),
                 SizedBox(height: 10.0),
                 loginInput(
+                    textEditingController: gendercontroller,
                     text: 'Gender',
                     icon: CupertinoIcons.person,
                     validator: myValidator(requiredField: "gender")),

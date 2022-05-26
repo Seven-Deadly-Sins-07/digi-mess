@@ -40,7 +40,7 @@ class WelcomePage extends StatelessWidget {
             ),
             ButtonWidget(
               backgroundColor: Colors.indigo.shade900,
-              text: 'login',
+              text: 'Login',
               textColor: Colors.white,
               // n: 1,
               ontap: () {
@@ -52,7 +52,7 @@ class WelcomePage extends StatelessWidget {
             const SizedBox(height: 20.0),
             ButtonWidget(
               backgroundColor: Colors.white,
-              text: 'Sign-in',
+              text: 'Sign-up',
               textColor: Colors.black,
               // n: 2,
               ontap: () {

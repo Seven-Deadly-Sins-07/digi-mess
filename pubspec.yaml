@@ -16,6 +16,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.2
   form_field_validator: ^1.1.0
+  fluttertoast: ^8.0.9
+  #  Firebase stuff:
+  firebase_core: ^1.17.0
+  firebase_database: ^9.0.14
+  firebase_auth: ^3.3.18
+  cloud_firestore: ^3.1.16
+
 ##  firebase auto and firebase core
 #  firebase_core: ^1.17.0
 #  firebase_auth: ^3.3.18

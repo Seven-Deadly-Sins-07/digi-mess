@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_project/customer_registration.dart';
+import 'package:mini_project/screens/customer_registration.dart';
+// import 'package:mini_project/customer_registration.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

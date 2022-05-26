@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "299281816563",
-    "project_id": "miniprojectlogin-data",
-    "storage_bucket": "miniprojectlogin-data.appspot.com"
+    "project_number": "403415711344",
+    "project_id": "digi-mess-26f21",
+    "storage_bucket": "digi-mess-26f21.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:299281816563:android:d3b423ad8ac4db1c87d086",
+        "mobilesdk_app_id": "1:403415711344:android:d6b2cd8ce5e45272c5feb5",
         "android_client_info": {
           "package_name": "shatayu07.com.mini_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "299281816563-akdnm2v2b2i09bjmo5ann7379fg2d01v.apps.googleusercontent.com",
+          "client_id": "403415711344-cl3ubjk9ip8ethcfhvbvq49ris0jkuc7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBsD3UmUXwcJ453OcrNaJ9JC173nRjQlKM"
+          "current_key": "AIzaSyBp6bD2CUFOLHJVV_hD-eVevKot8FeQRBw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "299281816563-akdnm2v2b2i09bjmo5ann7379fg2d01v.apps.googleusercontent.com",
+              "client_id": "403415711344-cl3ubjk9ip8ethcfhvbvq49ris0jkuc7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

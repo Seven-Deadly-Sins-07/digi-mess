@@ -4,8 +4,9 @@ class loginInput extends StatefulWidget {
   final String text;
   final IconData icon;
   final FormFieldValidator validator;
+  TextEditingController textEditingController = TextEditingController();
 
-  loginInput({required this.text, required this.icon, required this.validator});
+  loginInput({required this.text, required this.icon, required this.validator,required this.textEditingController});
 
   @override
   State<loginInput> createState() => _loginInputState();
@@ -15,6 +16,7 @@ class _loginInputState extends State<loginInput> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: widget.textEditingController,
       validator: widget.validator,
         decoration: InputDecoration(
           icon: Icon(widget.icon,
