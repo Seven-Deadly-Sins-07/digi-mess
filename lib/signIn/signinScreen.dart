@@ -46,7 +46,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 const arrowHead(),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: arrowBody(text: 'Sign-in'),
+                  child: arrowBody(text: 'Sign-up'),
                 ),
                 SizedBox(height: 50.0),
                 SignInInput(
@@ -102,7 +102,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                   child: ButtonWidget(
                     backgroundColor: Colors.blue,
-                    text: 'Sign-in',
+                    text: 'Sign-up',
                     textColor: Colors.white,
                     // n: 3,
                     ontap: () async{
@@ -123,18 +123,18 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40.0, right: 40.0),
-                  child: ButtonWidget(
-                    backgroundColor: Colors.blue,
-                    text: 'Login',
-                    textColor: Colors.white,
-                    // n: 3,
-                    ontap: () {
-
-                    },
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 40.0, right: 40.0),
+                //   child: ButtonWidget(
+                //     backgroundColor: Colors.blue,
+                //     text: 'Login',
+                //     textColor: Colors.white,
+                //     // n: 3,
+                //     ontap: () {
+                //
+                //     },
+                //   ),
+                // ),
               ],
             ),
           ),

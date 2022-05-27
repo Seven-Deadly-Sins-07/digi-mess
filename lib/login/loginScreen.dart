@@ -39,10 +39,10 @@ class _LoginSceenState extends State<LoginSceen> {
                 const SizedBox(height: 40.0),
                 const arrowHead(),
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: arrowBody(text: 'Login'),
                 ),
-                const SizedBox(height: 250.0),
+                const SizedBox(height: 140.0),
                 loginInput(
                   textEditingController: usernamecontroller,
                   text: 'Email',
@@ -81,9 +81,8 @@ class _LoginSceenState extends State<LoginSceen> {
                     },
                   ),
                 ),
-                const SizedBox(height: 80.0),
-                Padding(
-                  padding: const EdgeInsets.only(left: 100.0),
+                const SizedBox(height: 50.0),
+                Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
