@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:mini_project/screens/home_page.dart';
 import 'screens/welcome_page.dart';
 
 void main() async{
@@ -16,8 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+<<<<<<< HEAD
       home: WelcomePage(),
       debugShowCheckedModeBanner: false,
+=======
+      // home: WelcomePage(),
+      home: HomePage(),
+>>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
     );
   }
 }

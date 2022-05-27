@@ -4,7 +4,7 @@ import 'package:mini_project/constants/arrow_body.dart';
 import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/login/login_Input.dart';
 import 'package:mini_project/constants/buttons.dart';
-import 'package:mini_project/validator.dart';
+import 'package:mini_project/constants/validator.dart';
 
 import 'home_page.dart';
 
