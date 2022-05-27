@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mini_project/constants/arrow_body.dart';
+import 'package:mini_project/constants/toastmessage.dart';
 import 'package:mini_project/login/login_Input.dart';
 import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/constants/buttons.dart';
@@ -75,6 +77,10 @@ class _LoginSceenState extends State<LoginSceen> {
                             return HomePage();
                           }));
                         }
+                        else
+                          {
+                            showToastMessage("Please enter a registered email address");
+                          }
                       } else {
                         print("try filling credentials");
                       }
@@ -87,14 +93,31 @@ class _LoginSceenState extends State<LoginSceen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      // ElevatedButton(
+                      //     onPressed: () {},
+                      //     style: ElevatedButton.styleFrom(
+                      //       primary: Colors.transparent,
+                      //     ),
+                      //     child: const Text('forgot username')),
                       ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
-                          ),
-                          child: const Text('forgot username')),
-                      ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () async{
+                            if(usernamecontroller.text.isNotEmpty)
+                            {
+                              bool checkEmail = await forgotPassword(
+                                  usernamecontroller.text.trim());
+                              if (checkEmail) {
+                                showToastMessage("An email with reset password link has been sent to given email (Check spam if not found!)");
+                              }
+                              else
+                                {
+                                  showToastMessage("Please enter a registered email address");
+                                }
+                            }
+                            else
+                              {
+                                showToastMessage("Please enter the email");
+                              }
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: Colors.transparent,
                           ),
