@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mini_project/customer_info.dart';
 import 'package:mini_project/screens/customer_registration.dart';
+import 'customer_registration.dart';
+import 'customer_registration.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -61,16 +64,14 @@ class _HomePageState extends State<HomePage> {
 
             });
           },
-        )
-
-
+        ),
         ],
       ),
       body: Container(
         child: Column(
           children: [
             Expanded(
-              child: _textEditingController!.text.isNotEmpty && customerOnSearch.isEmpty?
+              child: _textEditingController.text.isNotEmpty && customerOnSearch.isEmpty?
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -84,24 +85,32 @@ class _HomePageState extends State<HomePage> {
                 ),
               )
                   : ListView.builder(
-                itemCount: _textEditingController!.text.isNotEmpty ? customerOnSearch.length:_items.length,
+                itemCount: _textEditingController.text.isNotEmpty ? customerOnSearch.length:_items.length,
                 itemBuilder: (BuildContext context, int idx){
                   // return idx ==0 ? _searchBar() : _listItem(index-1);
-                  return Card(
-                    elevation: 2.0,
+                  return ElevatedButton(
+                    // elevation: 2.0,
                     child: Padding(
                       padding: EdgeInsets.all(10.0),
                       child: ListTile(
                         title: Text(
-                            _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: _items[idx],
+                            _textEditingController.text.isNotEmpty ? customerOnSearch[idx]: _items[idx],
                         ),
                         subtitle: Text(
-                          _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: mob_no    [idx],
+                          _textEditingController.text.isNotEmpty ? customerOnSearch[idx]: mob_no    [idx],
                         ),
                         trailing: Icon(Icons.edit),
                       ),
                     ),
-                    color: Colors.white60,
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.white70),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CustomerInfo()),
+                      );
+                    },
                   );
                 },
               ),

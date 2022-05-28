@@ -6,14 +6,15 @@ import 'package:mini_project/constants/toastmessage.dart';
 import 'package:mini_project/login/login_Input.dart';
 import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/constants/buttons.dart';
-<<<<<<< HEAD
-import 'package:mini_project/validator.dart';
-=======
+// <<<<<<< HEAD
+import 'package:mini_project/constants/validator.dart';
+// =======
 import 'package:mini_project/constants/validator.dart';
 
->>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
+// >>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
 import '../../screens/home_page.dart';
 import '../firebase/flutterfire.dart';
+
 
 class LoginSceen extends StatefulWidget {
   const LoginSceen({Key? key}) : super(key: key);
