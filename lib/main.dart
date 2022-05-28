@@ -17,13 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-<<<<<<< HEAD
+//<<<<<<< HEAD
       home: WelcomePage(),
       debugShowCheckedModeBanner: false,
-=======
+//=======
       // home: WelcomePage(),
       home: HomePage(),
->>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
+//>>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
     );
   }
 }
