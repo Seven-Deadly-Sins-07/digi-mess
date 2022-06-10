@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/screens/customer_registration.dart';
@@ -32,8 +33,34 @@ class _HomePageState extends State<HomePage> {
   ];
   List<String> mob_no = ["9130612961", "8421337102", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555"];
   TextEditingController? _textEditingController = TextEditingController();
+
+
+  bool showScreen = false;
+  List<Map> allInstances = [];
+
+
+  FirebaseFirestore db = FirebaseFirestore.instance;
+  @override
+  void initState() {
+    db.collection("data").get().then((event) {
+      List<Map> allInstances2 = [];
+      for (var doc in event.docs) {
+        allInstances2.add(doc.data());
+      }
+      setState(() {
+        showScreen = true;
+        allInstances = allInstances2;
+      });
+    });
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       // appBar: AppBar(
       //   title: Padding(
@@ -41,7 +68,7 @@ class _HomePageState extends State<HomePage> {
       //     child: Text('Customers', style: TextStyle(fontSize: 25.0),),
       //   ),
       // ),
-      body: Container(
+      body: showScreen ? Container(
           // color: Colors.black,
           child: Column(
         children: [
@@ -95,20 +122,32 @@ class _HomePageState extends State<HomePage> {
                 : ListView.builder(
                     itemCount: _textEditingController!.text.isNotEmpty
                         ? customerOnSearch.length
-                        : _items.length,
+                        : allInstances.length,
                     itemBuilder: (BuildContext context, int idx) {
                       // return idx ==0 ? _searchBar() : _listItem(index-1);
                       return ElevatedButton(
 
                         // elevation: 2.0,
+                        // child: Padding(
+                        //   padding: EdgeInsets.all(10.0),
+                        //   child: ListTile(
+                        //     title: Text(
+                        //       _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: _items[idx],
+                        //     ),
+                        //     subtitle: Text(
+                        //       _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: mob_no[idx],
+                        //     ),
+                        //     trailing: Icon(Icons.edit),
+                        //   ),
+                        // ),
                         child: Padding(
                           padding: EdgeInsets.all(10.0),
                           child: ListTile(
                             title: Text(
-                              _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: _items[idx],
+                               allInstances[idx]['address'],
                             ),
                             subtitle: Text(
-                              _textEditingController!.text.isNotEmpty ? customerOnSearch[idx]: mob_no    [idx],
+                              allInstances[idx]['name'],
                             ),
                             trailing: Icon(Icons.edit),
                           ),
@@ -127,7 +166,9 @@ class _HomePageState extends State<HomePage> {
                   ),
           )
         ],
-      )),
+      )) : Container(
+        child: Text('Loading...'),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
