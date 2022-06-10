@@ -167,7 +167,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                 ],
               ),
 
-              FlatButton(
+              ElevatedButton(
                 onPressed: () {},
                 child: Container(
                   height: 40.0,

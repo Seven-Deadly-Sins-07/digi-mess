@@ -5,7 +5,7 @@ import 'package:mini_project/constants/arrow_head.dart';
 import 'package:mini_project/login/login_Input.dart';
 import 'package:mini_project/constants/buttons.dart';
 import 'package:mini_project/constants/validator.dart';
-
+import '../firebase/flutterfire.dart';
 import 'home_page.dart';
 
 class CustomerRegistration extends StatefulWidget {
@@ -97,12 +97,16 @@ class _CustomerRegistrationState extends State<CustomerRegistration> {
                     text: 'Register',
                     textColor: Colors.white,
                     // n: 4,
-                    ontap: () {
+                    ontap: () async {
                       if (_formFieldKey.currentState!.validate()) {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return HomePage();
-                        }));
+                        var shouldNavigate = await customerRegistration(namecontroller.text.trim(),contact1controller.text.trim(),contact2controller.text.trim(),addresscontroller.text.trim(),collegecontroller.text.trim(),gendercontroller.text.trim());
+                        if(shouldNavigate)
+                        {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                                return HomePage();
+                              }));
+                        }
                       } else {
                         print("try filling credentials");
                       }

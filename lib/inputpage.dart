@@ -175,7 +175,7 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
 
-              FlatButton(
+              ElevatedButton(
                 onPressed: () {},
                 child: Container(
                   height: 30.0,
