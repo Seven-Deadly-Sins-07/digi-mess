@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mini_project/groceriesmain.dart';
 import 'package:mini_project/screens/customer_registration.dart';
 import 'groceriesmain.dart';
@@ -15,34 +16,47 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   List<Widget> containers = [
-      HomePage(),
-      GroceriesMain(),
+    HomePage(),
+    GroceriesMain(),
   ];
   final _textEditingController = TextEditingController();
+  bool small = false;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar:AppBar(
-          title: Text("Digi Mess"),
+        appBar: AppBar(
+            title: Center(
+              child: Text("Digi Mess",
+                style: GoogleFonts.lato(
+                  textStyle: Theme.of(context).textTheme.headline4,
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                ),
+
+              ),
+            ),
             bottom: TabBar(
+              labelStyle: TextStyle(fontSize: small ? 10.0 : 18.0),
+              // labelPadding: EdgeInsetsGeometry(),
               tabs: <Widget>[
                 Tab(
                   text: "Customers",
+                  height: 70.0,
                 ),
                 Tab(
                   text: "Expences",
                 )
               ],
-            )
-        ),
+            )),
         body: TabBarView(
           children: containers,
         ),
-        ),
-      );
+      ),
+    );
   }
 }

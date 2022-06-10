@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import '../home_page.dart';
 import 'package:mini_project/constants/buttons.dart';
-import 'customer_result.dart';
+import '../customer_result.dart';
 import 'dart:math';
 
 class CustomerInfo extends StatelessWidget {
@@ -59,7 +59,7 @@ class CustomerInfo extends StatelessWidget {
               onPressed: () {
                 setState() {
                   getFees = inputcontroller.text as num;
-                  money = 2400 - 80 * (getFees);
+                  money = 2400 - (80*(getFees));
                 }
               },
               //onPressed

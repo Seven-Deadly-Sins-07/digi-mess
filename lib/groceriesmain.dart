@@ -55,7 +55,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                   Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
-                      'GROCERY \n EXPENDITURE :',
+                      'GROCERY \nEXPENDITURE :',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0,
@@ -66,6 +66,8 @@ class _GroceriesMainState extends State<GroceriesMain> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 1.0),
                         child: Container(
+                          height: 40.0,
+                          width: 200.0,
                           child: Center(
                             child: Text('4000',
                                 style: TextStyle(
@@ -77,7 +79,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.black,
-                              width: 4.0,
+                              width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(7.0),
 
@@ -92,7 +94,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                   Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
-                      'WAGES \n EXPENDITURE :',
+                      'WAGES \nEXPENDITURE :',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0,
@@ -103,6 +105,8 @@ class _GroceriesMainState extends State<GroceriesMain> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 1.0),
                         child: Container(
+                          height: 40.0,
+                          width: 200.0,
                           child: Center(
                             child: Text('4000',
                                 style: TextStyle(
@@ -114,7 +118,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.black,
-                              width: 4.0,
+                              width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(7.0),
 
@@ -129,7 +133,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                   Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
-                      'VEGETABLES \n EXPENDITURE :',
+                      'VEGETABLES \nEXPENDITURE :',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0,
@@ -140,6 +144,8 @@ class _GroceriesMainState extends State<GroceriesMain> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 1.0),
                         child: Container(
+                          height: 40.0,
+                          width: 200.0,
                           child: Center(
                             child: Text('4000',
                                 style: TextStyle(
@@ -151,7 +157,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.black,
-                              width: 4.0,
+                              width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(7.0),
 
@@ -164,17 +170,17 @@ class _GroceriesMainState extends State<GroceriesMain> {
               FlatButton(
                 onPressed: () {},
                 child: Container(
-                  height: 30.0,
-                  width: 80.0,
+                  height: 40.0,
+                  width: 200.0,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black87,
-                      width: 4.0,
+                      width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Center(
-                    child: Text('Add'),
+                    child: Text('Add', style: TextStyle(fontSize:25.0),),
                   ),
                 ),
               ),
@@ -197,7 +203,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.black87,
-                        width: 4.0,
+                        width: 3.0,
                       ),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -209,8 +215,8 @@ class _GroceriesMainState extends State<GroceriesMain> {
         ),
         decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/imaag.png"),
-              opacity: 0.7,
+              image: AssetImage("images/imaag.png"),
+              opacity: 0.5,
               fit: BoxFit.cover,
             )),
       ),
