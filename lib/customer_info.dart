@@ -78,7 +78,7 @@ class CustomerInfo extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               money != null ? '$money' : '',
-              style: TextStyle(fontSize: 20.0),
+              style: const TextStyle(fontSize: 20.0),
             ),
           ),
         ],

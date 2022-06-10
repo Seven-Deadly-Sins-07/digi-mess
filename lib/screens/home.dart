@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mini_project/groceriesmain.dart';
 import 'package:mini_project/screens/customer_registration.dart';
+import 'groceriesmain.dart';
 
 import '../home_page.dart';
+import 'home_page.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,7 +18,7 @@ class _HomeState extends State<Home> {
 
   List<Widget> containers = [
       HomePage(),
-      HomePage(),
+      GroceriesMain(),
   ];
   final _textEditingController = TextEditingController();
   @override

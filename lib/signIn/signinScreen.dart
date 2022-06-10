@@ -9,6 +9,9 @@ import 'package:mini_project/signIn/signin_input.dart';
 import 'package:mini_project/constants/validator.dart';
 
 import '../../screens/home_page.dart';
+import '../screens/home.dart';
+// import 'screens/home.dart';
+
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -113,7 +116,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                                return HomePage();
+                                return Home();
                               }));
                         }
                       } else {

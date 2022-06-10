@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/screens/home_page.dart';
 import 'screens/welcome_page.dart';
+import 'screens/home.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,11 +20,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 // <<<<<<< HEAD
 //       home: HomePage(),
-      home: WelcomePage(),
+//       home: WelcomePage(),
+    home: Home(),
       debugShowCheckedModeBanner: false,
 // =======
-//       home: WelcomePage(),
-      // home: HomePage(),
 // >>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
     );
   }

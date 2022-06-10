@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
-class InputPage extends StatefulWidget {
-  const InputPage({Key? key}) : super(key: key);
+class GroceriesMain extends StatefulWidget {
+  const GroceriesMain({Key? key}) : super(key: key);
 
   @override
-  State<InputPage> createState() => _InputPageState();
+  State<GroceriesMain> createState() => _GroceriesMainState();
 }
 
-class _InputPageState extends State<InputPage> {
+class _GroceriesMainState extends State<GroceriesMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        centerTitle: true,
-        title: Text(
-          'Grocery Page',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.purple,
+      //   centerTitle: true,
+      //   title: Text(
+      //     'Grocery Page',
+      //     style: TextStyle(
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //   ),
+      // ),
       body: Container(
         child: Padding(
           padding: EdgeInsets.all(10.0),

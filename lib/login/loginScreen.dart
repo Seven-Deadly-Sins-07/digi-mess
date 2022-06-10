@@ -14,6 +14,8 @@ import 'package:mini_project/constants/validator.dart';
 // >>>>>>> 2b6fb08cb0eed1ea1a59157ea7c76e3d395de395
 import '../../screens/home_page.dart';
 import '../firebase/flutterfire.dart';
+import '../screens/home.dart';
+// import 'home';
 
 
 class LoginSceen extends StatefulWidget {
@@ -80,7 +82,7 @@ class _LoginSceenState extends State<LoginSceen> {
                         {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return HomePage();
+                            return Home();
                           }));
                         }
                         else

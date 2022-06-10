@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/screens/customer_registration.dart';
 // import 'package:mini_project/customer_registration.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage1 extends StatefulWidget {
+  const HomePage1({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage1> createState() => _HomePage1State();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePage1State extends State<HomePage1> {
   //static values
   List<String> _items = ["Umesh Bagade", "Shatayu Nagdeve", "Atharva Dixit", "Om Gharge", "Shrenik Jadhav", "Supriya Pawar", "Riddhi Patil"];
   List<String> customerOnSearch = ["Umesh Bagade", "Shatayu Nagdeve", "Atharva Dixit", "Om Gharge", "Shrenik Jadhav", "Supriya Pawar", "Riddhi Patil"];
