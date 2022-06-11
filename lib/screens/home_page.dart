@@ -144,10 +144,10 @@ class _HomePageState extends State<HomePage> {
                           padding: EdgeInsets.all(10.0),
                           child: ListTile(
                             title: Text(
-                               allInstances[idx]['address'],
+                               allInstances[idx]['name'],
                             ),
                             subtitle: Text(
-                              allInstances[idx]['name'],
+                              allInstances[idx]['contact1'],
                             ),
                             trailing: Icon(Icons.edit),
                           ),
@@ -156,6 +156,7 @@ class _HomePageState extends State<HomePage> {
                           backgroundColor: MaterialStateProperty.all<Color>(Colors.white38),
                         ),
                         onPressed: () {
+
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => CustomerInfo()),

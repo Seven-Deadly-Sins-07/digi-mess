@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
 
-class GroceriesMain extends StatefulWidget {
-  const GroceriesMain({Key? key}) : super(key: key);
+class GroceriesInput extends StatefulWidget {
+  const GroceriesInput({Key? key}) : super(key: key);
 
   @override
-  State<GroceriesMain> createState() => _GroceriesMainState();
+  State<GroceriesInput> createState() => _GroceriesInputState();
 }
 
-class _GroceriesMainState extends State<GroceriesMain> {
+class _GroceriesInputState extends State<GroceriesInput> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.purple,
-      //   centerTitle: true,
-      //   title: Text(
-      //     'Grocery Page',
-      //     style: TextStyle(
-      //       fontWeight: FontWeight.bold,
-      //     ),
-      //   ),
-      // ),
       body: Container(
         child: Padding(
           padding: EdgeInsets.all(10.0),
@@ -28,7 +18,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Row(
-                children: [
+                children: const [
                   Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
@@ -49,10 +39,10 @@ class _GroceriesMainState extends State<GroceriesMain> {
                   )
                 ],
               ),
-              SizedBox(height: 2.0),
+              const SizedBox(height: 2.0),
               Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
                       'GROCERY \nEXPENDITURE :',
@@ -68,7 +58,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                         child: Container(
                           height: 40.0,
                           width: 200.0,
-                          child: Center(
+                          child: const Center(
                             child: Text('4000',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -91,7 +81,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
               SizedBox(height: 1.0),
               Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
                       'WAGES \nEXPENDITURE :',
@@ -107,7 +97,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                         child: Container(
                           height: 40.0,
                           width: 200.0,
-                          child: Center(
+                          child: const Center(
                             child: Text('4000',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -130,7 +120,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
               SizedBox(height: 1.0),
               Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
                       'VEGETABLES \nEXPENDITURE :',
@@ -146,7 +136,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                         child: Container(
                           height: 40.0,
                           width: 200.0,
-                          child: Center(
+                          child: const Center(
                             child: Text('4000',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -179,7 +169,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
                     ),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text('Add', style: TextStyle(fontSize:25.0),),
                   ),
                 ),
@@ -187,7 +177,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
 
               Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(7.0),
                     child: Text(
                       'NET TOTAL :',
@@ -213,7 +203,7 @@ class _GroceriesMainState extends State<GroceriesMain> {
             ],
           ),
         ),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("images/imaag.png"),
               opacity: 0.5,

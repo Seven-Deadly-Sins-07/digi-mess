@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mini_project/groceriesmain.dart';
+import 'package:mini_project/screens/groceriesmain.dart';
 import 'package:mini_project/screens/customer_registration.dart';
 import 'groceriesmain.dart';
 
@@ -28,7 +28,8 @@ class _HomeState extends State<Home> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-            title: Center(
+            title: Padding(
+              padding: const EdgeInsets.only(left: 45.0),
               child: Text("Digi Mess",
                 style: GoogleFonts.lato(
                   textStyle: Theme.of(context).textTheme.headline4,
