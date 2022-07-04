@@ -38,7 +38,6 @@ class _HomePageState extends State<HomePage> {
   bool showScreen = false;
   List<Map> allInstances = [];
 
-
   FirebaseFirestore db = FirebaseFirestore.instance;
   @override
   void initState() {
@@ -102,7 +101,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: _textEditingController!.text.isNotEmpty &&
-                    customerOnSearch.isEmpty
+                    allInstances.isEmpty
                 ? Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
