@@ -1,0 +1,211 @@
+ /* ! ALL */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* ! Body */
+body{
+    background-color: #4C4D5F;
+}
+
+/* ! NavBar */
+.nav-list{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #272635;
+}
+.nav-items{
+    text-decoration: none;
+    list-style: none;
+    font-size: 25px;
+    margin: 20px auto;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ! centerBlock */
+
+centerBlock{
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ! leftColumn */
+leftColumn{
+    background-color: #4C4D5F;
+}
+
+
+/* ! Side Panel */
+.sidepanel li{
+    list-style: none;
+    font-size: 20px;
+    margin: 10px 20px 25px 0px;
+    padding: 10px;
+    background-color: #707388;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.sidepanel li a{
+    color: white;
+    text-decoration: none;
+}
+
+.sidepanel li a:hover{
+    color: black;
+}
+
+/* ! rightColumn */
+rightColumn{
+    background-color: #5E6074;
+    border-radius: 15px 15px 0 0;
+    margin-right: 10px;
+}
+
+/* ! Grid1 */
+.grid1{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+/* ! Tags */
+
+.tags {
+    justify-content: center;
+}
+
+.tags button{
+    color: white;
+    margin: 15px 8px;
+    font-size: 20px;
+    background-color: #272635;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+.tags label{
+    color: white;
+    margin: 15px 8px;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+.tags select{
+    color: white;
+    margin: 15px 8px;
+    font-size: 20px;
+    background-color: #272635;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+.tags button:active{
+    color: black;
+    margin: 15px 8px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+/* ! Smaller Bax */
+
+.smallerBox{
+    background-color: #707388;
+    height: 600px;
+    border-radius: 15px;
+    margin: 15px 10px 0px;
+    overflow-x: hidden; /* For hiding scroll bar */
+    overflow-y: auto;
+    scrollbar-width: 0px;
+}
+
+.smallerBox::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+/* ! Cards */
+.card{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    text-align: center;
+    margin: 20px;
+    padding: 5px 20px 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(46, 46, 46);
+    transition: 0.5s;
+}
+
+.card img{
+    width: 200px;
+    box-shadow: 7px 7px 3px #ccc;
+}
+
+.card h3{
+    opacity: 50%;
+}
+
+.card:hover{
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 50px black;
+    top: -20px;
+}
+
+/* ! Media Queries */
+
+@media only screen and (max-width: 600px) {
+
+    .grid1{
+        display: block;
+    }
+
+    leftColumn{
+        display: none;
+    }
+
+    rightColumn{
+        width: 350px;
+    }
+
+    .card{
+        width: 250px;
+    }
+
+    .card img{
+        width: 100px;
+        height: 200px;
+    }
+
+    .tags form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tags select{
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    .smallerBox{
+        height: 600px;
+    }
+}
+
+@media only screen and (min-height: 1000px) {
+    .smallerBox{
+        height: 900px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>WCE Notice Board</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+</head>
+
+<style>
+    /*STYLE*/
+</style>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <img src="https://www.freepnglogos.com/uploads/simple-batman-logo-png-5.png" width="80" height="50"
+                alt="No image">
+            <li class="nav-items"><a href="#">WCE Notice Board</a></li>
+        </ul>
+    </nav>
+
+    <centerBlock class="grid1">
+        <leftColumn class="grid1-item">
+            <ul class="sidepanel">
+                <li class="side-items">
+                    <a href="#">Home</a>
+                </li>
+                <li class="side-items">
+                    <a href="#">Settings</a>
+                </li>
+                <li class="side-items">
+                    <a href="#">Help</a>
+                </li>
+                <li class="side-items">
+                    <a href="#">Log Out</a>
+                </li>
+            </ul>
+        </leftColumn>
+
+        <rightColumn class="grid1-item">
+            <div class="tags">
+                <form action="">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">
+                        <option value="everyone">Everyone</option>
+                        <option value="club">Club</option>
+                        <option value="myClass">My Class</option>
+                    </select>
+                    <label for="year">Year:</label>
+                    <select name="type" id="type">
+                        <option value="firstyear">First Year</option>
+                        <option value="secondYear">Second Year</option>
+                        <option value="thirdYear">Third Year</option>
+                        <option value="finalYear">Final Year</option>
+                    </select>
+                    <label for="branch">Branch:</label>
+                    <select name="type" id="type">
+                        <option value="civil">Civil</option>
+                        <option value="mechanical">Mechanical</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="it">Information Technology</option>
+                        <option value="cse">Computer Science</option>
+                    </select>
+                    <button type="submit">Sort</button>
+                </form>
+            </div>
+            <div class="smallerBox">
+                {%CARDS%}
+            </div>
+        </rightColumn>
+    </centerBlock>
+</body>
+
+</html>
